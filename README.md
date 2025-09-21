@@ -31,6 +31,17 @@ The system manages information about **teams, players, venues, fixtures, matches
 - **Temporary Tables** for match details, player achievements, and venue usage  
 - **Stored Procedures & Functions** for rankings, player insertion, record cleanup, match counts, goal totals  
 - **Triggers** to auto-update matches played and set default FIFA ranking  
-- **Window Functions** for ranking players, running totals, and per-team aggregates  
-- **OLAP Queries** with `ROLLUP`/`CUBE` for team stats, venue analysis, and performance reports  
+
+### 🪟 Window Functions
+- **`RANK()`** – rank players based on goals scored  
+- **`ROW_NUMBER()`** – uniquely identify players or matches within partitions  
+- **`DENSE_RANK()`** – handle ties in player goal rankings  
+- **`NTILE()`** – split players into performance quartiles  
+- **`LAG()` / `LEAD()`** – compare player/match performance across games  
+- **Running totals with `SUM() OVER()`** – track cumulative goals or matches played  
+
+### 📊 OLAP Queries
+- Aggregations with **`ROLLUP`** for multi-level summaries (e.g., goals by team → by tournament)  
+- Aggregations with **`CUBE`** for multidimensional analysis (e.g., venue usage by city and capacity)  
+- Slice-and-dice reporting for player, team, and venue analytics  
 
